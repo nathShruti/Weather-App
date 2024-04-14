@@ -1,0 +1,8 @@
+.search-btn {
+    border: 1px solid #000;
+    width: 20%;
+    box-shadow: 5px 5px 10px offset;
+    border-radius: 10px;
+    background-color: blue;
+    color: aliceblue;
+}

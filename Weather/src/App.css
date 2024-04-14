@@ -1,0 +1,103 @@
+@font-face {
+  font-family: 'Kanit-Black';
+  src: url('../src/assets/fonts/Kanit-Black.woff2') format('woff2'),
+      url('../src/assets/fonts/Kanit-Black.woff') format('woff');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Kanit-Regular';
+  src: url('../src/assets/fonts/Kanit-Regular.woff2') format('woff2'),
+      url('../src/assets/fonts/Kanit-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+::-webkit-scrollbar {
+  height: 0;
+  background: transparent;
+  width: 0;
+}
+
+/* #scrollableDiv::-webkit-scrollbar {
+  height: 100%;
+  background: black;
+  width: 2px;
+} */
+
+#scrollableDiv::-webkit-scrollbar {
+  width: 10px;
+}
+
+@media (max-width: 425px){
+  #scrollableDiv {
+    width: 320px;
+    margin: 0 auto;
+    overflow-x: scroll;
+    text-align: left;
+    font-size: small;
+  }
+
+  .aaa {
+    border-bottom: 1px solid black;
+  }
+}
+
+/* Track */
+#scrollableDiv::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+#scrollableDiv::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+#scrollableDiv::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
