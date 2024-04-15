@@ -4,7 +4,7 @@
 export default function ImgDesc({weatherData}) {
   // console.log(weatherData);
     return (
-      <div className="flex flex-col-reverse items-center lg:items-right text-white lg:justify-stretch w-auto h-auto">
+      <div className="flex flex-col-reverse sm:flex-col sm:pr-8 sm:py-2 items-center lg:items-right text-white lg:justify-stretch w-auto h-auto">
         <div className="w-auto">
         <img src={weatherData?.weather?.length && `https://openweathermap.org/img/wn/${weatherData?.weather[0]?.icon}@4x.png`} alt="desc"></img>
         </div>

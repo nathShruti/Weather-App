@@ -12,7 +12,7 @@ export default function Forecast({ weatherData }) {
       setLoader(true);
       // true
       try {
-        const response = await axios.get(`http://api.openweathermap.org/data/2.5/forecast?lat=${weatherData?.coord?.lat}&lon=${weatherData?.coord?.lon}&appid=129737e1c579d6e56f672692f566b676&units=metric`);
+        const response = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?lat=${weatherData?.coord?.lat}&lon=${weatherData?.coord?.lon}&appid=129737e1c579d6e56f672692f566b676&units=metric`);
         // Check if response.data.list exists and has elements
         if (response.data.list && response.data.list.length > 0) {
           setForecast(response.data.list);
@@ -37,9 +37,9 @@ export default function Forecast({ weatherData }) {
   // const fifth = (forecast?.list[4]?.dt_txt).split(" ");
   console.log(forecast)
   return (
-    <div className="p-5 text-4xl items-center text-white justify-stretch w-auto h-auto">
+    <div className="p-5 items-center text-white justify-stretch w-auto h-auto">
       <div className=" flex flex-row items-center gap-3 my-3">
-        <h2 className="tracking-wide text-bold mx-10">HOURLY FORECAST</h2>
+        <h2 className="tracking-wide text-bold text-xl mx-1">HOURLY FORECAST</h2>
         <ThreeDots
           visible={loader}
           height="40"
@@ -50,8 +50,8 @@ export default function Forecast({ weatherData }) {
           wrapperStyle={{}}
           wrapperClass=""/>
       </div>
-      <hr className="mx-10 my-2" />
-      <div className="flex flex-row items-center justify-between text-white mx-10">
+      <hr className="mx-1 my-1" />
+      <div className="flex flex-col justify-between text-white mx-1">
 
         {forecast && forecast.slice(0,5).map((item, index)=>{
 

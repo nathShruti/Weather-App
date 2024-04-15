@@ -16,7 +16,7 @@ function Page() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${location.state.name}&APPID=129737e1c579d6e56f672692f566b676&units=metric`);
+        const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${location.state.name}&APPID=129737e1c579d6e56f672692f566b676&units=metric`);
         setWeatherData(response.data);
       } catch (error) {
         console.error('Error fetching weather data:', error);
@@ -46,11 +46,11 @@ function Page() {
       : weatherData?.weather[0]?.main === 'Clear' ? 'bg-clear'
       : "bg-black"))}>
         <WeatherHead />
-        <div className="block w-full justify-between">
+        <div className="block sm:flex w-full justify-between">
           <CityDeets weatherData={weatherData} countryName={location.state.cou_name_en} className="w-2/4"></CityDeets>
           <ImgDesc weatherData={weatherData} className="w-2/4"></ImgDesc>
         </div>
-        <div className="block w-full justify-between">
+        <div className="block sm:flex w-full justify-between">
           <CityTemp weatherData={weatherData} className="w-2/4"></CityTemp>
           <Extras weatherData={weatherData} className="w-2/4"></Extras>
         </div>
