@@ -29,17 +29,11 @@ export default function Forecast({ weatherData }) {
     fetchData();
   }, [weatherData?.coord]);
 
-  // console.log(forecast?.list[1]?.dt_txt);
-  // const first = (forecast?.list[0]?.dt_txt).split(" ");
-  // const sec = (forecast?.list[1]?.dt_txt).split(" ");
-  // const third = (forecast?.list[2]?.dt_txt).split(" ");
-  // const four = (forecast?.list[3]?.dt_txt).split(" ");
-  // const fifth = (forecast?.list[4]?.dt_txt).split(" ");
   console.log(forecast)
   return (
-    <div className="p-5 items-center text-white justify-stretch w-auto h-auto">
+    <div className="p-5 lg:px-7 items-center text-white justify-stretch w-auto h-auto">
       <div className=" flex flex-row items-center gap-3 my-3">
-        <h2 className="tracking-wide text-bold text-xl mx-1">HOURLY FORECAST</h2>
+        <h2 className="tracking-wide text-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mx-1">HOURLY FORECAST</h2>
         <ThreeDots
           visible={loader}
           height="40"
@@ -51,14 +45,14 @@ export default function Forecast({ weatherData }) {
           wrapperClass=""/>
       </div>
       <hr className="mx-1 my-1" />
-      <div className="flex flex-col justify-between text-white mx-1">
+      <div className="flex flex-col sm:flex-row justify-between text-white mx-1">
 
         {forecast && forecast.slice(0,5).map((item, index)=>{
 
           return <div className="flex flex-col items-center justify-center">
-                <p className="m-1">{item.dt_txt.split(" ")[1]}</p>
+                <p className="m-1 lg:text-3xl">{item.dt_txt.split(" ")[1]}</p>
                 <img src={`https://openweathermap.org/img/wn/${item?.weather[0]?.icon}@2x.png`} alt="weather"/>
-                <p className="font-medium">{(item?.main?.temp).toFixed()}°C</p>
+                <p className="font-medium lg:text-3xl">{(item?.main?.temp).toFixed()}°C</p>
               </div>
         })}
       </div>

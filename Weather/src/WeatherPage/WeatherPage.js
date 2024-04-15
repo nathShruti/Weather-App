@@ -46,7 +46,7 @@ function Page() {
       : weatherData?.weather[0]?.main === 'Clear' ? 'bg-clear'
       : "bg-black"))}>
         <WeatherHead />
-        <div className="block sm:flex w-full justify-between">
+        <div className="block sm:flex w-full lg:mb-5 xl:mb-8 justify-between">
           <CityDeets weatherData={weatherData} countryName={location.state.cou_name_en} className="w-2/4"></CityDeets>
           <ImgDesc weatherData={weatherData} className="w-2/4"></ImgDesc>
         </div>
