@@ -57,7 +57,7 @@ export default function Forecast({ weatherData }) {
 
           return <div className="flex flex-col items-center justify-center">
                 <p className="m-1">{item.dt_txt.split(" ")[1]}</p>
-                <img src={`https://openweathermap.org/img/wn/${item?.weather[0]?.icon}@2x.png`} />
+                <img src={`https://openweathermap.org/img/wn/${item?.weather[0]?.icon}@2x.png`} alt="weather"/>
                 <p className="font-medium">{(item?.main?.temp).toFixed()}°C</p>
               </div>
         })}

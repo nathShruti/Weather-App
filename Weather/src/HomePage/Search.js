@@ -25,7 +25,7 @@ export default function SearchBar() {
         return () => {
             clearTimeout(timer);
         };
-    }, [search]);
+    }, [search , setSearchedCities]);
 
     return (
         <>

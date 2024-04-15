@@ -29,21 +29,21 @@ function Page() {
   return (
     <div className="Page font-kanit-regular">
       <div className={`bg-cover w-full h-full bg-no-repeat ` + 
-      (weatherData && weatherData?.weather?.length && (weatherData?.weather[0]?.main == 'Clouds' ? 'bg-clouds' 
-      : weatherData?.weather[0]?.main == 'Thunderstorm' ? 'bg-thunderstorm' 
-      : weatherData?.weather[0]?.main == 'Drizzle' ? 'bg-drizzle'
-      : weatherData?.weather[0]?.main == 'Rain' ? 'bg-rain'
-      : weatherData?.weather[0]?.main == 'Snow' ? 'bg-snow'
-      : weatherData?.weather[0]?.main == 'Mist' ? 'bg-mist'
-      : weatherData?.weather[0]?.main == 'Smoke' ? 'bg-smoke'
-      : weatherData?.weather[0]?.main == 'Haze' ? 'bg-haze'
-      : weatherData?.weather[0]?.main == 'Dust' ? 'bg-dust'
-      : weatherData?.weather[0]?.main == 'Fog' ? 'bg-fog'
-      : weatherData?.weather[0]?.main == 'Sand' ? 'bg-sand'
-      : weatherData?.weather[0]?.main == 'Ash' ? 'bg-ash'
-      : weatherData?.weather[0]?.main == 'Squall' ? 'bg-squall'
-      : weatherData?.weather[0]?.main == 'Tornado' ? 'bg-tornado'
-      : weatherData?.weather[0]?.main == 'Clear' ? 'bg-clear'
+      (weatherData && weatherData?.weather?.length && (weatherData?.weather[0]?.main === 'Clouds' ? 'bg-clouds' 
+      : weatherData?.weather[0]?.main === 'Thunderstorm' ? 'bg-thunderstorm' 
+      : weatherData?.weather[0]?.main === 'Drizzle' ? 'bg-drizzle'
+      : weatherData?.weather[0]?.main === 'Rain' ? 'bg-rain'
+      : weatherData?.weather[0]?.main === 'Snow' ? 'bg-snow'
+      : weatherData?.weather[0]?.main === 'Mist' ? 'bg-mist'
+      : weatherData?.weather[0]?.main === 'Smoke' ? 'bg-smoke'
+      : weatherData?.weather[0]?.main === 'Haze' ? 'bg-haze'
+      : weatherData?.weather[0]?.main === 'Dust' ? 'bg-dust'
+      : weatherData?.weather[0]?.main === 'Fog' ? 'bg-fog'
+      : weatherData?.weather[0]?.main === 'Sand' ? 'bg-sand'
+      : weatherData?.weather[0]?.main === 'Ash' ? 'bg-ash'
+      : weatherData?.weather[0]?.main === 'Squall' ? 'bg-squall'
+      : weatherData?.weather[0]?.main === 'Tornado' ? 'bg-tornado'
+      : weatherData?.weather[0]?.main === 'Clear' ? 'bg-clear'
       : "bg-black"))}>
         <WeatherHead />
         <div className="block w-full justify-between">
